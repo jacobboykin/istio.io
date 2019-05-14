@@ -7,7 +7,10 @@
 0.1.x
 0.2.x
 0.8.x
+1.0.x
+1.1.x
 1.x
+10ms
 10s
 123456789012.my
 14.60
@@ -23,6 +26,15 @@
 4s
 5000qps
 50Mb
+1ms
+2ms
+3ms
+4ms
+5ms
+6ms
+7ms
+8ms
+9ms
 6s
 72.96ms
 7Mb
@@ -79,9 +91,7 @@ backend
 backends
 base64
 BigQuery
-bind-productpager-viewer
 bitpipe
-BluePerf
 BluePerf
 boilerplates
 Bookinfo
@@ -91,6 +101,7 @@ bring-your-own-identity
 Brooks
 bt
 Budinsky
+Callouts
 camelCase
 canaried
 canarying
@@ -104,6 +115,7 @@ CIOs
 Circonus
 cli
 CloudWatch
+CNI
 cnn.com
 colocated
 ConfigMap
@@ -120,6 +132,8 @@ CRD
 CRDs
 CSRs
 Ctrl
+CVE
+CVEs
 D3.js
 Datadog
 datapath
@@ -129,6 +143,7 @@ Datawire
 debian
 decapsulated
 Delayering
+Demailly
 deployment
 dev
 Devirtualization
@@ -137,6 +152,7 @@ discuss.istio.io
 distro
 docker-compose's
 docker.io
+Duggirala
 e.g.
 eBPF
 edition.cnn.com
@@ -152,9 +168,11 @@ ExecAction
 Exfiltrating
 ExternalName
 facto
+failover
 failovers
 faq
 faq.md
+Fawad
 fcm.googleapis.com
 FDs
 filename
@@ -168,6 +186,7 @@ fortio
 FQDNs
 frontend
 gbd
+GCP
 GCP-IAM
 GCP_OPTS
 gdb
@@ -204,8 +223,8 @@ HTTP2
 http2
 httpbin
 httpbin.org
-httpReqTimeout
 https
+Huawei
 hyperkube
 Hystrix
 i.e.
@@ -215,6 +234,7 @@ initializer
 Initializers
 initializers
 injector
+InkScape
 int64
 interdependencies
 Interdependencies
@@ -233,6 +253,8 @@ istio.io
 istio.io.
 Istiofied
 IstioMesh
+istio-mixer
+istio-system
 jason
 Jog
 json
@@ -243,6 +265,7 @@ JWTs
 Keepalived
 key.pem
 Keycloak
+Khaliq
 Kiali
 Kibana
 Knative
@@ -261,6 +284,8 @@ learnings
 LibreSSL
 lifecycle
 LightStep
+linter
+linters
 liveness
 logInfo
 loopback
@@ -270,9 +295,7 @@ macOS
 Mandar
 Manolache
 memcached
-memcached
 memcached-2's
-memquota
 MeshPolicy
 Mesos
 mesos-dns
@@ -287,12 +310,10 @@ misconfigured
 misordered
 MongoDB
 mongodb
-MSG_PEEK
 Multicloud
 multicloud
 Multicluster
 multicluster
-mutatingwebhookconfiguration
 mutual-tls
 myapp
 MySQL
@@ -306,7 +327,10 @@ networking.istio.io
 nginx
 nodePorts
 non-sandboxed
+normalization
 ns
+NUL
+NULs
 OAuth2
 oc
 ok
@@ -319,6 +343,7 @@ OpenID_Connect
 OpenShift
 OpenSSL
 openssl
+OpenTracing
 OS-level
 Ostrowski
 p50
@@ -330,6 +355,9 @@ parenthesization
 passthrough
 peek
 pem
+PKI
+PKIs
+plaintext
 platform-specific
 pluggability
 pluggable
@@ -364,6 +392,7 @@ RawVM
 rbac
 re-applied
 re-patch
+RedHat
 reachability
 rearchitect
 recomposition
@@ -393,8 +422,11 @@ RPCs
 runtime
 runtimes
 sa
+Salesforce
 sayin
 schemas
+SDKs
+sds
 secretName
 Secura
 selinux
@@ -402,6 +434,7 @@ serverless
 serviceaccount
 ServiceGraph
 servicegraph-example
+ServiceMesher
 sha256
 sharded
 Sharding
@@ -415,7 +448,8 @@ SLOs
 Snell-Feikema
 SNI
 SolarWinds
-spiffe
+SPIFFE
+SPIFFE-compliant
 SREs
 Stackdriver
 Statsd
@@ -463,6 +497,7 @@ uncommented
 Undeploy
 unencrypted
 unmanaged
+unnormalized
 unsampled
 untrusted
 uptime
@@ -492,6 +527,7 @@ VM-based
 VMs
 VMware
 VPN
+VPNs
 WBoilerplates
 WeaveWorks
 webhook
@@ -508,6 +544,7 @@ wikipedia.org
 wildcard
 wildcarded
 wildcards
+workgroup
 www.google.com
 x-envoy-upstream-rq-timeout-ms
 X.509

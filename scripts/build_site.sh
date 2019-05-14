@@ -1,16 +1,11 @@
 #!/usr/bin/env sh
 set -e
 
-mkdir -p static/css static/js static/img
+mkdir -p generated/css generated/js generated/img tmp/js
 
-npx sass src/sass/light_theme_archive.scss light_theme_archive.css -s compressed
-npx sass src/sass/light_theme_normal.scss light_theme_normal.css -s compressed
-npx sass src/sass/light_theme_preliminary.scss light_theme_preliminary.css -s compressed
-npx sass src/sass/dark_theme_archive.scss dark_theme_archive.css -s compressed
-npx sass src/sass/dark_theme_normal.scss dark_theme_normal.css -s compressed
-npx sass src/sass/dark_theme_preliminary.scss dark_theme_preliminary.css -s compressed
-mv light_theme* static/css
-mv dark_theme* static/css
-npx uglifyjs src/js/misc.js src/js/utils.js src/js/prism.js --mangle --compress -o static/js/all.min.js --source-map
-npx uglifyjs src/js/styleSwitcher.js --mangle --compress -o static/js/styleSwitcher.min.js --source-map
-npx svgstore -o static/img/icons.svg src/icons/**/*.svg
+npx sass src/sass/_all.scss all.css -s compressed
+mv all.css* generated/css
+npx tsc
+npx babel tmp/js/constants.js tmp/js/utils.js tmp/js/kbdnav.js tmp/js/themes.js tmp/js/menu.js tmp/js/header.js tmp/js/sidebar.js tmp/js/tabset.js tmp/js/prism.js tmp/js/codeBlocks.js tmp/js/links.js tmp/js/scroll.js tmp/js/overlays.js tmp/js/lang.js tmp/js/callToAction.js --out-file generated/js/all.min.js --source-maps --minified --no-comments --presets minify
+npx babel tmp/js/themes_init.js --out-file generated/js/themes_init.min.js --source-maps --minified --no-comments --presets minify
+npx svgstore -o generated/img/icons.svg src/icons/**/*.svg

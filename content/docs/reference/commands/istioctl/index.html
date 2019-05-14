@@ -1,17 +1,21 @@
 ---
+WARNING: THIS IS AN AUTO-GENERATED FILE, DO NOT EDIT. PLEASE MODIFY THE ORIGINAL SOURCE IN THE https://github.com/istio/istio REPO
+source_repo: https://github.com/istio/istio
 title: istioctl
 description: Istio control interface.
 generator: pkg-collateral-docs
-number_of_entries: 28
+number_of_entries: 36
 ---
 <p>Istio configuration command line utility for service operators to
 debug and diagnose their Istio mesh.
 </p>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -30,59 +34,14 @@ debug and diagnose their Istio mesh.
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
 </tr>
 <tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
-</tr>
-<tr>
 <td><code>--namespace &lt;string&gt;</code></td>
 <td><code>-n</code></td>
 <td>Config namespace  (default ``)</td>
-</tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
 </tr>
 </tbody>
 </table>
@@ -93,9 +52,11 @@ A group of commands used to interact with Istio authentication policies.
 </p>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -114,59 +75,14 @@ A group of commands used to interact with Istio authentication policies.
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
 </tr>
 <tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
-</tr>
-<tr>
 <td><code>--namespace &lt;string&gt;</code></td>
 <td><code>-n</code></td>
 <td>Config namespace  (default ``)</td>
-</tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
 </tr>
 </tbody>
 </table>
@@ -176,16 +92,18 @@ istioctl authn tls-check
 </code></pre>
 <h2 id="istioctl-authn-tls-check">istioctl authn tls-check</h2>
 <p>
-Requests Pilot to check for what authentication policy and destination rule it uses for each service in
-service registry, and check if TLS settings are compatible between them.
+Check what authentication policies and destination rules pilot uses to config a proxy instance,
+and check if TLS settings are compatible between them.
 </p>
-<pre class="language-bash"><code>istioctl authn tls-check [&lt;service&gt;] [flags]
+<pre class="language-bash"><code>istioctl authn tls-check &lt;pod-name[.namespace]&gt; [&lt;service&gt;] [flags]
 </code></pre>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -204,69 +122,25 @@ service registry, and check if TLS settings are compatible between them.
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
 </tr>
 <tr>
 <td><code>--namespace &lt;string&gt;</code></td>
 <td><code>-n</code></td>
 <td>Config namespace  (default ``)</td>
 </tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
-</tr>
 </tbody>
 </table>
 <h3 id="istioctl-authn-tls-check Examples">Examples</h3>
 <pre class="language-bash"><code>
-# Check settings for all known services in the service registry:
-istioctl authn tls-check
+# Check settings for pod &#34;foo-656bd7df7c-5zp4s&#34; in namespace default:
+istioctl authn tls-check 656bd7df7c-5zp4s.default
 
-# Check settings for a specific service
-istioctl authn tls-check foo.bar.svc.cluster.local
+# Check settings for pod &#34;foo-656bd7df7c-5zp4s&#34; in namespace default, filtered on destintation
+service &#34;bar&#34; :
+istioctl authn tls-check 656bd7df7c-5zp4s.default bar
 
 </code></pre>
 <h2 id="istioctl-deregister">istioctl deregister</h2>
@@ -275,9 +149,11 @@ istioctl authn tls-check foo.bar.svc.cluster.local
 </code></pre>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -296,59 +172,14 @@ istioctl authn tls-check foo.bar.svc.cluster.local
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
 </tr>
 <tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
-</tr>
-<tr>
 <td><code>--namespace &lt;string&gt;</code></td>
 <td><code>-n</code></td>
 <td>Config namespace  (default ``)</td>
-</tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
 </tr>
 </tbody>
 </table>
@@ -360,9 +191,11 @@ istioctl deregister my-svc 172.17.0.2
 <p>Experimental commands that may be modified or deprecated</p>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -381,59 +214,14 @@ istioctl deregister my-svc 172.17.0.2
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
 </tr>
 <tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
-</tr>
-<tr>
 <td><code>--namespace &lt;string&gt;</code></td>
 <td><code>-n</code></td>
 <td>Config namespace  (default ``)</td>
-</tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
 </tr>
 </tbody>
 </table>
@@ -443,9 +231,11 @@ istioctl deregister my-svc 172.17.0.2
 </code></pre>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -469,49 +259,9 @@ istioctl deregister my-svc 172.17.0.2
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
 </tr>
 <tr>
 <td><code>--namespace &lt;string&gt;</code></td>
@@ -523,39 +273,26 @@ istioctl deregister my-svc 172.17.0.2
 <td><code>-o</code></td>
 <td>Output filename  (default `-`)</td>
 </tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
-</tr>
 </tbody>
 </table>
 <h3 id="istioctl-experimental-convert-ingress Examples">Examples</h3>
 <pre class="language-bash"><code>istioctl experimental convert-ingress -f samples/bookinfo/platform/kube/bookinfo-ingress.yaml
 </code></pre>
-<h2 id="istioctl-experimental-metrics">istioctl experimental metrics</h2>
-<p>
-Prints the metrics for the specified service(s) when running in Kubernetes.</p>
-<p>This command finds a Prometheus pod running in the specified istio system 
-namespace. It then executes a series of queries per requested workload to
-find the following top-level workload metrics: total requests per second,
-error rate, and request latency at p50, p90, and p99 percentiles. The 
-query results are printed to the console, organized by workload name.</p>
-<p>All metrics returned are from server-side reports. This means that latencies
-and error rates are from the perspective of the service itself and not of an
-individual client (or aggregate set of clients). Rates and latencies are
-calculated over a time interval of 1 minute.
-</p>
-<pre class="language-bash"><code>istioctl experimental metrics &lt;workload name&gt;...
+<h2 id="istioctl-experimental-dashboard">istioctl experimental dashboard</h2>
+<p>Access to Istio web UIs</p>
+<pre class="language-bash"><code>istioctl experimental dashboard [flags]
 </code></pre>
-<p>
-m
-<p>
+<div class="aliases">
+<pre class="language-bash"><code>istioctl experimental dash [flags]
+istioctl experimental d [flags]
+</code></pre></div>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -574,14 +311,49 @@ m
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
+<td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
+<td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
 </tr>
 <tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
+<td><code>--namespace &lt;string&gt;</code></td>
+<td><code>-n</code></td>
+<td>Config namespace  (default ``)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="istioctl-experimental-dashboard-controlz">istioctl experimental dashboard controlz</h2>
+<p>Open the ControlZ web UI for a pod in the Istio control plane</p>
+<pre class="language-bash"><code>istioctl experimental dashboard controlz &lt;pod-name[.namespace]&gt; [flags]
+</code></pre>
+<table class="command-flags">
+<thead>
+<tr>
+<th>Flags</th>
+<th>Shorthand</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--context &lt;string&gt;</code></td>
 <td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
+<td>The name of the kubeconfig context to use  (default ``)</td>
+</tr>
+<tr>
+<td><code>--ctrlz_port &lt;int&gt;</code></td>
+<td></td>
+<td>ControlZ port  (default `9876`)</td>
+</tr>
+<tr>
+<td><code>--istioNamespace &lt;string&gt;</code></td>
+<td><code>-i</code></td>
+<td>Istio system namespace  (default `istio-system`)</td>
+</tr>
+<tr>
+<td><code>--kubeconfig &lt;string&gt;</code></td>
+<td><code>-c</code></td>
+<td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
@@ -589,44 +361,324 @@ m
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
 </tr>
 <tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
+<td><code>--namespace &lt;string&gt;</code></td>
+<td><code>-n</code></td>
+<td>Config namespace  (default ``)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="istioctl-experimental-dashboard-controlz Examples">Examples</h3>
+<pre class="language-bash"><code>istioctl experimental dashboard controlz pilot-123-456.istio-system
+</code></pre>
+<h2 id="istioctl-experimental-dashboard-envoy">istioctl experimental dashboard envoy</h2>
+<p>Open the Envoy admin dashboard for a sidecar</p>
+<pre class="language-bash"><code>istioctl experimental dashboard envoy &lt;pod-name[.namespace]&gt; [flags]
+</code></pre>
+<table class="command-flags">
+<thead>
+<tr>
+<th>Flags</th>
+<th>Shorthand</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--context &lt;string&gt;</code></td>
 <td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
+<td>The name of the kubeconfig context to use  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
+<td><code>--istioNamespace &lt;string&gt;</code></td>
+<td><code>-i</code></td>
+<td>Istio system namespace  (default `istio-system`)</td>
 </tr>
 <tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
+<td><code>--kubeconfig &lt;string&gt;</code></td>
+<td><code>-c</code></td>
+<td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
+<td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
+<td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
 </tr>
 <tr>
 <td><code>--namespace &lt;string&gt;</code></td>
 <td><code>-n</code></td>
 <td>Config namespace  (default ``)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="istioctl-experimental-dashboard-envoy Examples">Examples</h3>
+<pre class="language-bash"><code>istioctl experimental dashboard envoy productpage-123-456.default
+</code></pre>
+<h2 id="istioctl-experimental-dashboard-grafana">istioctl experimental dashboard grafana</h2>
+<p>Open Istio&#39;s Grafana dashboard</p>
+<pre class="language-bash"><code>istioctl experimental dashboard grafana [flags]
+</code></pre>
+<table class="command-flags">
+<thead>
 <tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
+<th>Flags</th>
+<th>Shorthand</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--context &lt;string&gt;</code></td>
+<td></td>
+<td>The name of the kubeconfig context to use  (default ``)</td>
+</tr>
+<tr>
+<td><code>--istioNamespace &lt;string&gt;</code></td>
+<td><code>-i</code></td>
+<td>Istio system namespace  (default `istio-system`)</td>
+</tr>
+<tr>
+<td><code>--kubeconfig &lt;string&gt;</code></td>
+<td><code>-c</code></td>
+<td>Kubernetes configuration file  (default ``)</td>
+</tr>
+<tr>
+<td><code>--log_output_level &lt;string&gt;</code></td>
+<td></td>
+<td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
+</tr>
+<tr>
+<td><code>--namespace &lt;string&gt;</code></td>
+<td><code>-n</code></td>
+<td>Config namespace  (default ``)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="istioctl-experimental-dashboard-grafana Examples">Examples</h3>
+<pre class="language-bash"><code>istioctl experimental dashboard grafana
+</code></pre>
+<h2 id="istioctl-experimental-dashboard-jaeger">istioctl experimental dashboard jaeger</h2>
+<p>Open Istio&#39;s Jaeger dashboard</p>
+<pre class="language-bash"><code>istioctl experimental dashboard jaeger [flags]
+</code></pre>
+<table class="command-flags">
+<thead>
+<tr>
+<th>Flags</th>
+<th>Shorthand</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--context &lt;string&gt;</code></td>
+<td></td>
+<td>The name of the kubeconfig context to use  (default ``)</td>
+</tr>
+<tr>
+<td><code>--istioNamespace &lt;string&gt;</code></td>
+<td><code>-i</code></td>
+<td>Istio system namespace  (default `istio-system`)</td>
+</tr>
+<tr>
+<td><code>--kubeconfig &lt;string&gt;</code></td>
+<td><code>-c</code></td>
+<td>Kubernetes configuration file  (default ``)</td>
+</tr>
+<tr>
+<td><code>--log_output_level &lt;string&gt;</code></td>
+<td></td>
+<td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
+</tr>
+<tr>
+<td><code>--namespace &lt;string&gt;</code></td>
+<td><code>-n</code></td>
+<td>Config namespace  (default ``)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="istioctl-experimental-dashboard-jaeger Examples">Examples</h3>
+<pre class="language-bash"><code>istioctl experimental dashboard jaeger
+</code></pre>
+<h2 id="istioctl-experimental-dashboard-kiali">istioctl experimental dashboard kiali</h2>
+<p>Open Istio&#39;s Kiali dashboard</p>
+<pre class="language-bash"><code>istioctl experimental dashboard kiali [flags]
+</code></pre>
+<table class="command-flags">
+<thead>
+<tr>
+<th>Flags</th>
+<th>Shorthand</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--context &lt;string&gt;</code></td>
+<td></td>
+<td>The name of the kubeconfig context to use  (default ``)</td>
+</tr>
+<tr>
+<td><code>--istioNamespace &lt;string&gt;</code></td>
+<td><code>-i</code></td>
+<td>Istio system namespace  (default `istio-system`)</td>
+</tr>
+<tr>
+<td><code>--kubeconfig &lt;string&gt;</code></td>
+<td><code>-c</code></td>
+<td>Kubernetes configuration file  (default ``)</td>
+</tr>
+<tr>
+<td><code>--log_output_level &lt;string&gt;</code></td>
+<td></td>
+<td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
+</tr>
+<tr>
+<td><code>--namespace &lt;string&gt;</code></td>
+<td><code>-n</code></td>
+<td>Config namespace  (default ``)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="istioctl-experimental-dashboard-kiali Examples">Examples</h3>
+<pre class="language-bash"><code>istioctl experimental dashboard kiali
+</code></pre>
+<h2 id="istioctl-experimental-dashboard-prometheus">istioctl experimental dashboard prometheus</h2>
+<p>Open Istio&#39;s Prometheus dashboard</p>
+<pre class="language-bash"><code>istioctl experimental dashboard prometheus [flags]
+</code></pre>
+<table class="command-flags">
+<thead>
+<tr>
+<th>Flags</th>
+<th>Shorthand</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--context &lt;string&gt;</code></td>
+<td></td>
+<td>The name of the kubeconfig context to use  (default ``)</td>
+</tr>
+<tr>
+<td><code>--istioNamespace &lt;string&gt;</code></td>
+<td><code>-i</code></td>
+<td>Istio system namespace  (default `istio-system`)</td>
+</tr>
+<tr>
+<td><code>--kubeconfig &lt;string&gt;</code></td>
+<td><code>-c</code></td>
+<td>Kubernetes configuration file  (default ``)</td>
+</tr>
+<tr>
+<td><code>--log_output_level &lt;string&gt;</code></td>
+<td></td>
+<td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
+</tr>
+<tr>
+<td><code>--namespace &lt;string&gt;</code></td>
+<td><code>-n</code></td>
+<td>Config namespace  (default ``)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="istioctl-experimental-dashboard-prometheus Examples">Examples</h3>
+<pre class="language-bash"><code>istioctl experimental dashboard prometheus
+</code></pre>
+<h2 id="istioctl-experimental-dashboard-zipkin">istioctl experimental dashboard zipkin</h2>
+<p>Open Istio&#39;s Zipkin dashboard</p>
+<pre class="language-bash"><code>istioctl experimental dashboard zipkin [flags]
+</code></pre>
+<table class="command-flags">
+<thead>
+<tr>
+<th>Flags</th>
+<th>Shorthand</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--context &lt;string&gt;</code></td>
+<td></td>
+<td>The name of the kubeconfig context to use  (default ``)</td>
+</tr>
+<tr>
+<td><code>--istioNamespace &lt;string&gt;</code></td>
+<td><code>-i</code></td>
+<td>Istio system namespace  (default `istio-system`)</td>
+</tr>
+<tr>
+<td><code>--kubeconfig &lt;string&gt;</code></td>
+<td><code>-c</code></td>
+<td>Kubernetes configuration file  (default ``)</td>
+</tr>
+<tr>
+<td><code>--log_output_level &lt;string&gt;</code></td>
+<td></td>
+<td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
+</tr>
+<tr>
+<td><code>--namespace &lt;string&gt;</code></td>
+<td><code>-n</code></td>
+<td>Config namespace  (default ``)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="istioctl-experimental-dashboard-zipkin Examples">Examples</h3>
+<pre class="language-bash"><code>istioctl experimental dashboard zipkin
+</code></pre>
+<h2 id="istioctl-experimental-metrics">istioctl experimental metrics</h2>
+<p>
+Prints the metrics for the specified service(s) when running in Kubernetes.</p>
+<p>This command finds a Prometheus pod running in the specified istio system 
+namespace. It then executes a series of queries per requested workload to
+find the following top-level workload metrics: total requests per second,
+error rate, and request latency at p50, p90, and p99 percentiles. The 
+query results are printed to the console, organized by workload name.</p>
+<p>All metrics returned are from server-side reports. This means that latencies
+and error rates are from the perspective of the service itself and not of an
+individual client (or aggregate set of clients). Rates and latencies are
+calculated over a time interval of 1 minute.
+</p>
+<pre class="language-bash"><code>istioctl experimental metrics &lt;workload name&gt;...
+</code></pre>
+<div class="aliases">
+<pre class="language-bash"><code>istioctl experimental m &lt;workload name&gt;...
+</code></pre></div>
+<table class="command-flags">
+<thead>
+<tr>
+<th>Flags</th>
+<th>Shorthand</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--context &lt;string&gt;</code></td>
+<td></td>
+<td>The name of the kubeconfig context to use  (default ``)</td>
+</tr>
+<tr>
+<td><code>--istioNamespace &lt;string&gt;</code></td>
+<td><code>-i</code></td>
+<td>Istio system namespace  (default `istio-system`)</td>
+</tr>
+<tr>
+<td><code>--kubeconfig &lt;string&gt;</code></td>
+<td><code>-c</code></td>
+<td>Kubernetes configuration file  (default ``)</td>
+</tr>
+<tr>
+<td><code>--log_output_level &lt;string&gt;</code></td>
+<td></td>
+<td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
+</tr>
+<tr>
+<td><code>--namespace &lt;string&gt;</code></td>
+<td><code>-n</code></td>
+<td>Config namespace  (default ``)</td>
 </tr>
 </tbody>
 </table>
@@ -645,9 +697,11 @@ A group of commands used to interact with Istio RBAC policies. For example, Quer
 request is allowed or denied under the current Istio RBAC policies.</p>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -666,59 +720,14 @@ request is allowed or denied under the current Istio RBAC policies.</p>
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
 </tr>
 <tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
-</tr>
-<tr>
 <td><code>--namespace &lt;string&gt;</code></td>
 <td><code>-n</code></td>
 <td>Config namespace  (default ``)</td>
-</tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
 </tr>
 </tbody>
 </table>
@@ -738,9 +747,11 @@ is being taken on. PATH is the HTTP path within the service.</p>
 </code></pre>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -764,59 +775,14 @@ is being taken on. PATH is the HTTP path within the service.</p>
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
 </tr>
 <tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
-</tr>
-<tr>
 <td><code>--namespace &lt;string&gt;</code></td>
 <td><code>-n</code></td>
 <td>Config namespace  (default ``)</td>
-</tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
 </tr>
 <tr>
 <td><code>--subject-properties &lt;stringArray&gt;</code></td>
@@ -839,15 +805,22 @@ istioctl experimental rbac can -s source.namespace=foo POST rating /data -a dest
 </code></pre>
 <h2 id="istioctl-experimental-verify-install">istioctl experimental verify-install</h2>
 <p>
-		verify-install Verifies Istio Installation Status
+		verify-install verifies Istio installation status against the installation file
+		you specified when you installed Istio. It loops through all the installation
+		resources defined in your installation file and reports whether all of them are
+		in ready status. It will report failure when any of them are not ready.</p>
+<p>		If you do not specify installation file it will perform pre-check for your cluster
+		and report whether the cluster is ready for Istio installation.
 </p>
 <pre class="language-bash"><code>istioctl experimental verify-install [flags]
 </code></pre>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -856,9 +829,14 @@ istioctl experimental rbac can -s source.namespace=foo POST rating /data -a dest
 <td>The name of the kubeconfig context to use  (default ``)</td>
 </tr>
 <tr>
+<td><code>--enableVerbose</code></td>
+<td></td>
+<td>Enable verbose output </td>
+</tr>
+<tr>
 <td><code>--filename &lt;stringSlice&gt;</code></td>
 <td><code>-f</code></td>
-<td>  (default `[]`)</td>
+<td>Istio YAML installation file.  (default `[]`)</td>
 </tr>
 <tr>
 <td><code>--istioNamespace &lt;string&gt;</code></td>
@@ -871,59 +849,14 @@ istioctl experimental rbac can -s source.namespace=foo POST rating /data -a dest
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
 </tr>
 <tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
-</tr>
-<tr>
 <td><code>--namespace &lt;string&gt;</code></td>
 <td><code>-n</code></td>
 <td>Config namespace  (default ``)</td>
-</tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
 </tr>
 <tr>
 <td><code>--recursive</code></td>
@@ -934,12 +867,19 @@ istioctl experimental rbac can -s source.namespace=foo POST rating /data -a dest
 </table>
 <h3 id="istioctl-experimental-verify-install Examples">Examples</h3>
 <pre class="language-bash"><code>
-istioctl verify-install -f istio-demo.yaml
+		# Verify that Istio can be freshly installed
+		istioctl experimental verify-install
+		
+		# Verify that the deployment matches the istio-demo profile
+		istioctl experimental verify-install -f istio-demo.yaml
+		
+		# Verify the deployment matches a custom Istio deployment configuration
+		istioctl experimental verify-install -f $HOME/istio.yaml
 
 </code></pre>
 <h2 id="istioctl-kube-inject">istioctl kube-inject</h2>
 <p></p>
-<p>kube-inject manually injects envoy sidecar into kubernetes
+<p>kube-inject manually injects the Envoy sidecar into Kubernetes
 workloads. Unsupported resources are left unmodified so it is safe to
 run kube-inject over a single file that contains multiple Service,
 ConfigMap, Deployment, etc. definitions for a complex application. Its
@@ -951,19 +891,20 @@ added as necessary.</p>
 <p>The Istio project is continually evolving so the Istio sidecar
 configuration may change unannounced. When in doubt re-run istioctl
 kube-inject on deployments to get the most up-to-date changes.</p>
-<p>To override the sidecar injection template built into istioctl, the
-parameters --injectConfigFile or --injectConfigMapName can be used.
-Both options override any other template configuration parameters, eg.
---hub and --tag.  These options would typically be used with the
+<p>To override the sidecar injection template from kubernetes configmap
+&#39;istio-inject&#39;, the parameters --injectConfigFile or --injectConfigMapName
+can be used. Either of options would typically be used with the
 file/configmap created with a new Istio release.
 </p>
 <pre class="language-bash"><code>istioctl kube-inject [flags]
 </code></pre>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -984,7 +925,7 @@ file/configmap created with a new Istio release.
 <tr>
 <td><code>--injectConfigMapName &lt;string&gt;</code></td>
 <td></td>
-<td>ConfigMap name for Istio sidecar injection, key should be &#34;config&#34;.This option overrides any other sidecar injection config options, eg. --hub  (default `istio-sidecar-injector`)</td>
+<td>ConfigMap name for Istio sidecar injection, key should be &#34;config&#34;.  (default `istio-sidecar-injector`)</td>
 </tr>
 <tr>
 <td><code>--istioNamespace &lt;string&gt;</code></td>
@@ -997,49 +938,9 @@ file/configmap created with a new Istio release.
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
 </tr>
 <tr>
 <td><code>--meshConfigFile &lt;string&gt;</code></td>
@@ -1062,34 +963,9 @@ file/configmap created with a new Istio release.
 <td>Modified output Kubernetes resource filename  (default ``)</td>
 </tr>
 <tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
-</tr>
-<tr>
-<td><code>--readinessFailureThreshold &lt;uint32&gt;</code></td>
+<td><code>--valuesFile &lt;string&gt;</code></td>
 <td></td>
-<td>The threshold for successive failed readiness probes.  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--readinessInitialDelaySeconds &lt;uint32&gt;</code></td>
-<td></td>
-<td>The initial delay (in seconds) for the readiness probe.  (default `1`)</td>
-</tr>
-<tr>
-<td><code>--readinessPeriodSeconds &lt;uint32&gt;</code></td>
-<td></td>
-<td>The period between readiness probes (in seconds).  (default `2`)</td>
-</tr>
-<tr>
-<td><code>--rewriteAppProbe</code></td>
-<td></td>
-<td>Whether injector rewrites the liveness health check to let kubelet health check the app when mtls is on. </td>
-</tr>
-<tr>
-<td><code>--statusPort &lt;int&gt;</code></td>
-<td></td>
-<td>HTTP Port on which to serve pilot agent status. The path /healthz/ can be used for health checking. If zero, agent status will not be provided.  (default `15020`)</td>
+<td>injection values configuration filename.  (default ``)</td>
 </tr>
 </tbody>
 </table>
@@ -1106,20 +982,19 @@ istioctl kube-inject -f deployment.yaml -o deployment-injected.yaml
 kubectl get deployment -o yaml | istioctl kube-inject -f - | kubectl apply -f -
 
 # Create a persistent version of the deployment with Envoy sidecar
-# injected configuration from kubernetes configmap &#39;istio-inject&#39;
+# injected configuration from Kubernetes configmap &#39;istio-inject&#39;
 istioctl kube-inject -f deployment.yaml -o deployment-injected.yaml --injectConfigMapName istio-inject
 
 </code></pre>
 <h2 id="istioctl-proxy-config">istioctl proxy-config</h2>
 <p>A group of commands used to retrieve information about proxy configuration from the Envoy config dump</p>
-<p>
-pc
-<p>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -1138,49 +1013,9 @@ pc
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
 </tr>
 <tr>
 <td><code>--namespace &lt;string&gt;</code></td>
@@ -1191,11 +1026,6 @@ pc
 <td><code>--output &lt;string&gt;</code></td>
 <td><code>-o</code></td>
 <td>Output format: one of json|short  (default `short`)</td>
-</tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
 </tr>
 </tbody>
 </table>
@@ -1207,14 +1037,16 @@ pc
 <p>Retrieve information about bootstrap configuration for the Envoy instance in the specified pod.</p>
 <pre class="language-bash"><code>istioctl proxy-config bootstrap &lt;pod-name[.namespace]&gt; [flags]
 </code></pre>
-<p>
-b
-<p>
+<div class="aliases">
+<pre class="language-bash"><code>istioctl proxy-config b &lt;pod-name[.namespace]&gt; [flags]
+</code></pre></div>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -1233,49 +1065,9 @@ b
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
 </tr>
 <tr>
 <td><code>--namespace &lt;string&gt;</code></td>
@@ -1286,11 +1078,6 @@ b
 <td><code>--output &lt;string&gt;</code></td>
 <td><code>-o</code></td>
 <td>Output format: one of json|short  (default `short`)</td>
-</tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
 </tr>
 </tbody>
 </table>
@@ -1303,14 +1090,17 @@ b
 <p>Retrieve information about cluster configuration for the Envoy instance in the specified pod.</p>
 <pre class="language-bash"><code>istioctl proxy-config cluster &lt;pod-name[.namespace]&gt; [flags]
 </code></pre>
-<p>
-clustersc
-<p>
+<div class="aliases">
+<pre class="language-bash"><code>istioctl proxy-config clusters &lt;pod-name[.namespace]&gt; [flags]
+istioctl proxy-config c &lt;pod-name[.namespace]&gt; [flags]
+</code></pre></div>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -1339,49 +1129,9 @@ clustersc
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
 </tr>
 <tr>
 <td><code>--namespace &lt;string&gt;</code></td>
@@ -1392,11 +1142,6 @@ clustersc
 <td><code>--output &lt;string&gt;</code></td>
 <td><code>-o</code></td>
 <td>Output format: one of json|short  (default `short`)</td>
-</tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
 </tr>
 <tr>
 <td><code>--port &lt;int&gt;</code></td>
@@ -1425,14 +1170,17 @@ clustersc
 <p>Retrieve information about endpoint configuration for the Envoy instance in the specified pod.</p>
 <pre class="language-bash"><code>istioctl proxy-config endpoint &lt;pod-name[.namespace]&gt; [flags]
 </code></pre>
-<p>
-endpointsep
-<p>
+<div class="aliases">
+<pre class="language-bash"><code>istioctl proxy-config endpoints &lt;pod-name[.namespace]&gt; [flags]
+istioctl proxy-config ep &lt;pod-name[.namespace]&gt; [flags]
+</code></pre></div>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -1461,49 +1209,9 @@ endpointsep
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
 </tr>
 <tr>
 <td><code>--namespace &lt;string&gt;</code></td>
@@ -1514,11 +1222,6 @@ endpointsep
 <td><code>--output &lt;string&gt;</code></td>
 <td><code>-o</code></td>
 <td>Output format: one of json|short  (default `short`)</td>
-</tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
 </tr>
 <tr>
 <td><code>--port &lt;int&gt;</code></td>
@@ -1552,14 +1255,17 @@ endpointsep
 <p>Retrieve information about listener configuration for the Envoy instance in the specified pod.</p>
 <pre class="language-bash"><code>istioctl proxy-config listener &lt;pod-name[.namespace]&gt; [flags]
 </code></pre>
-<p>
-listenersl
-<p>
+<div class="aliases">
+<pre class="language-bash"><code>istioctl proxy-config listeners &lt;pod-name[.namespace]&gt; [flags]
+istioctl proxy-config l &lt;pod-name[.namespace]&gt; [flags]
+</code></pre></div>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -1583,49 +1289,9 @@ listenersl
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
 </tr>
 <tr>
 <td><code>--namespace &lt;string&gt;</code></td>
@@ -1636,11 +1302,6 @@ listenersl
 <td><code>--output &lt;string&gt;</code></td>
 <td><code>-o</code></td>
 <td>Output format: one of json|short  (default `short`)</td>
-</tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
 </tr>
 <tr>
 <td><code>--port &lt;int&gt;</code></td>
@@ -1669,14 +1330,17 @@ listenersl
 <p>Retrieve information about route configuration for the Envoy instance in the specified pod.</p>
 <pre class="language-bash"><code>istioctl proxy-config route &lt;pod-name[.namespace]&gt; [flags]
 </code></pre>
-<p>
-routesr
-<p>
+<div class="aliases">
+<pre class="language-bash"><code>istioctl proxy-config routes &lt;pod-name[.namespace]&gt; [flags]
+istioctl proxy-config r &lt;pod-name[.namespace]&gt; [flags]
+</code></pre></div>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -1695,49 +1359,9 @@ routesr
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
 </tr>
 <tr>
 <td><code>--name &lt;string&gt;</code></td>
@@ -1753,11 +1377,6 @@ routesr
 <td><code>--output &lt;string&gt;</code></td>
 <td><code>-o</code></td>
 <td>Output format: one of json|short  (default `short`)</td>
-</tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
 </tr>
 </tbody>
 </table>
@@ -1778,14 +1397,16 @@ Retrieves last sent and last acknowledged xDS sync from Pilot to each Envoy in t
 <p></p>
 <pre class="language-bash"><code>istioctl proxy-status [&lt;pod-name[.namespace]&gt;] [flags]
 </code></pre>
-<p>
-ps
-<p>
+<div class="aliases">
+<pre class="language-bash"><code>istioctl ps [&lt;pod-name[.namespace]&gt;] [flags]
+</code></pre></div>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -1804,59 +1425,14 @@ ps
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
 </tr>
 <tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
-</tr>
-<tr>
 <td><code>--namespace &lt;string&gt;</code></td>
 <td><code>-n</code></td>
 <td>Config namespace  (default ``)</td>
-</tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
 </tr>
 </tbody>
 </table>
@@ -1874,9 +1450,11 @@ ps
 </code></pre>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -1905,59 +1483,14 @@ ps
 <td>List of labels to apply if creating a service/endpoint; e.g. -l env=prod,vers=2  (default `[]`)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
 </tr>
 <tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
-</tr>
-<tr>
 <td><code>--namespace &lt;string&gt;</code></td>
 <td><code>-n</code></td>
 <td>Config namespace  (default ``)</td>
-</tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
 </tr>
 <tr>
 <td><code>--serviceaccount &lt;string&gt;</code></td>
@@ -1972,9 +1505,11 @@ ps
 </code></pre>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -1998,59 +1533,14 @@ ps
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
 </tr>
 <tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
-</tr>
-<tr>
 <td><code>--namespace &lt;string&gt;</code></td>
 <td><code>-n</code></td>
 <td>Config namespace  (default ``)</td>
-</tr>
-<tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
 </tr>
 <tr>
 <td><code>--recursive</code></td>
@@ -2068,9 +1558,11 @@ ps
 </code></pre>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -2089,49 +1581,9 @@ ps
 <td>Kubernetes configuration file  (default ``)</td>
 </tr>
 <tr>
-<td><code>--log_as_json</code></td>
-<td></td>
-<td>Whether to format output as JSON or in plain console-friendly format </td>
-</tr>
-<tr>
-<td><code>--log_caller &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated list of scopes for which to include caller information, scopes can be any of [ads, default, kube-converter, meshconfig, model, rbac]  (default ``)</td>
-</tr>
-<tr>
 <td><code>--log_output_level &lt;string&gt;</code></td>
 <td></td>
 <td>Comma-separated minimum per-scope logging level of messages to output, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope&gt;:&lt;level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:info`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate &lt;string&gt;</code></td>
-<td></td>
-<td>The path for the optional rotating log file  (default ``)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_age &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum age in days of a log file beyond which the file is rotated (0 indicates no limit)  (default `30`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_backups &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum number of log file backups to keep before older files are deleted (0 indicates no limit)  (default `1000`)</td>
-</tr>
-<tr>
-<td><code>--log_rotate_max_size &lt;int&gt;</code></td>
-<td></td>
-<td>The maximum size in megabytes of a log file beyond which the file is rotated  (default `104857600`)</td>
-</tr>
-<tr>
-<td><code>--log_stacktrace_level &lt;string&gt;</code></td>
-<td></td>
-<td>Comma-separated minimum per-scope logging level at which stack traces are captured, in the form of &lt;scope&gt;:&lt;level&gt;,&lt;scope:level&gt;,... where scope can be one of [ads, default, kube-converter, meshconfig, model, rbac] and level can be one of [debug, info, warn, error, fatal, none]  (default `default:none`)</td>
-</tr>
-<tr>
-<td><code>--log_target &lt;stringArray&gt;</code></td>
-<td></td>
-<td>The set of paths where to output the log. This can be any path as well as the special values stdout and stderr  (default `[stdout]`)</td>
 </tr>
 <tr>
 <td><code>--namespace &lt;string&gt;</code></td>
@@ -2144,11 +1596,6 @@ ps
 <td>One of &#39;yaml&#39; or &#39;json&#39;.  (default ``)</td>
 </tr>
 <tr>
-<td><code>--platform &lt;string&gt;</code></td>
-<td><code>-p</code></td>
-<td>Istio host platform  (default `kube`)</td>
-</tr>
-<tr>
 <td><code>--remote</code></td>
 <td></td>
 <td>Prints remote version information, from the control plane </td>
@@ -2157,6 +1604,222 @@ ps
 <td><code>--short</code></td>
 <td><code>-s</code></td>
 <td>Displays a short form of the version information </td>
+</tr>
+</tbody>
+</table>
+<h2 id="envvars">Environment variables</h2>
+These environment variables affect the behavior of the <code>istioctl</code> command.
+<table class="envvars">
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Type</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ISTIO_GPRC_MAXSTREAMS</code></td>
+<td>Integer</td>
+<td><code>100000</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>K8S_INGRESS_NS</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_CERT_DIR</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_DEBOUNCE_AFTER</code></td>
+<td>Time Duration</td>
+<td><code>100ms</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_DEBOUNCE_MAX</code></td>
+<td>Time Duration</td>
+<td><code>10s</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_DEBUG_ADSZ_CONFIG</code></td>
+<td>Boolean</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_DISABLE_EDS_ISOLATION</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_DISABLE_XDS_MARSHALING_TO_ANY</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_ENABLE_CDS_PRECOMPUTATION</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_ENABLE_FALLTHROUGH_ROUTE</code></td>
+<td>Boolean</td>
+<td><code>false</code></td>
+<td>EnableFallthroughRoute provides an option to add a final wildcard match for routes. When ALLOW_ANY traffic policy is used, a Passthrough cluster is used. When REGISTRY_ONLY traffic policy is used, a 502 error is returned.</td>
+</tr>
+<tr>
+<td><code>PILOT_ENABLE_LOCALITY_LOAD_BALANCING</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_ENABLE_WAIT_CACHE_SYNC</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_HTTP10</code></td>
+<td>Boolean</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_PUSH_BURST</code></td>
+<td>Integer</td>
+<td><code>100</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_PUSH_THROTTLE</code></td>
+<td>Integer</td>
+<td><code>10</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_TRACE_SAMPLING</code></td>
+<td>Floating-Point</td>
+<td><code>100</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>POD_NAME</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>TERMINATION_DRAIN_DURATION_SECONDS</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>V2_REFRESH</code></td>
+<td>Time Duration</td>
+<td><code>0s</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="annotations">Annotations</h2>
+These resource annotations are used by the <code>istioctl</code> command.
+<table class="annotations">
+<thead>
+<tr>
+<th>Annotation Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>policy.istio.io/check</code></td>
+<td>Determines the policy for behavior when unable to connect to Mixer. If not set, FAIL_CLOSE is set, rejecting requests.</td>
+</tr>
+<tr>
+<td><code>policy.istio.io/checkBaseRetryWaitTime</code></td>
+<td>Base time to wait between retries, will be adjusted by backoff and jitter. In duration format. If not set, this will be 80ms.</td>
+</tr>
+<tr>
+<td><code>policy.istio.io/checkMaxRetryWaitTime</code></td>
+<td>Maximum time to wait between retries to Mixer. In duration format. If not set, this will be 1000ms.</td>
+</tr>
+<tr>
+<td><code>policy.istio.io/checkRetries</code></td>
+<td>The maximum number of retries on transport errors to Mixer. If not set, this will be 0, indicating no retries.</td>
+</tr>
+<tr>
+<td><code>readiness.status.sidecar.istio.io/applicationPorts</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>readiness.status.sidecar.istio.io/failureThreshold</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>readiness.status.sidecar.istio.io/initialDelaySeconds</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>readiness.status.sidecar.istio.io/periodSeconds</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>sidecar.istio.io/inject</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>sidecar.istio.io/interceptionMode</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>sidecar.istio.io/proxyImage</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>sidecar.istio.io/rewriteAppHTTPProbers</code></td>
+<td>Rewrite HTTP readiness and liveness probes to be redirected to istio-proxy sidecar</td>
+</tr>
+<tr>
+<td><code>sidecar.istio.io/status</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>status.sidecar.istio.io/port</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>traffic.sidecar.istio.io/excludeInboundPorts</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>traffic.sidecar.istio.io/excludeOutboundIPRanges</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>traffic.sidecar.istio.io/includeInboundPorts</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>traffic.sidecar.istio.io/includeOutboundIPRanges</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>traffic.sidecar.istio.io/kubevirtInterfaces</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>

@@ -1,19 +1,19 @@
 {{ define "main" }}
 
-{{ partial "primary-top.html" . }}
+{{ partial "primary_top.html" . }}
 
 {{ $questions := .Resources.ByType "page" }}
 {{ $sorted_questions := sort $questions ".Params.weight" }}
 
-<nav class="toc-inlined d-xl-none d-print-none" style="display:block!important;">
+<nav class="toc-inlined toc-forced">
     <hr/>
     <div class="directory" role="directory">
         <nav id="InlineTableOfContents">
-            <ul>
+            <ol>
                 {{ range $q := $sorted_questions }}
-                    <li><a href="#{{ $q.File.BaseFileName | urlize }}">{{ $q.Title }}</a></li>
+                    <li role="none" aria-label="{{ $q.Title }}"><a href="#{{ $q.File.BaseFileName | urlize }}">{{ $q.Title }}</a></li>
                 {{ end }}
-            </ul>
+            </ol>
         </nav>
     </div>
     <hr/>
@@ -30,6 +30,6 @@
     {{ end }}
 </div>
 
-{{ partial "primary-bottom.html" . }}
+{{ partial "primary_bottom.html" . }}
 
 {{ end }}

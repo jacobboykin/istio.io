@@ -21,7 +21,7 @@ application beyond a single cluster, for example:
 * Services within the mesh can use [service entries](/docs/concepts/traffic-management/#service-entries)
   to access standalone external services or to access services exposed by another loosely-coupled service mesh,
   a.k.a. *mesh federation*.
-* You can [expand the service mesh](/docs/setup/kubernetes/mesh-expansion/) to include services running
+* You can [expand the service mesh](/docs/setup/kubernetes/additional-setup/mesh-expansion/) to include services running
   on VMs or bare metal hosts.
 * You can combine the services from more than one cluster into a single composite service mesh,
   i.e., a *multicluster mesh*.
@@ -59,7 +59,7 @@ you can configure a single logical service mesh that is composed from the partic
 This approach has no special networking requirements and is therefore generally considered
 the easiest approach to start with when there is no universal connectivity across clusters.
 
-{{< image width="80%" ratio="36.01%"
+{{< image width="80%"
     link="./multicluster-with-gateways.svg"
     caption="Istio mesh spanning multiple Kubernetes clusters using multiple Istio control planes and Gateway to reach remote pods"
     >}}
@@ -76,17 +76,20 @@ that can be configured to handle service names of the form `<name>.<namespace>.g
 For example, calls from any cluster to `foo.ns1.global` will resolve to the `foo` service in
 namespace `ns1` of any cluster where it is running.
 To set up this kind of multicluster configuration, visit our
-[multiple control planes with gateways instructions](/docs/setup/kubernetes/multicluster-install/gateways/).
+[multiple control planes with gateways instructions](/docs/setup/kubernetes/install/multicluster/gateways/).
 
 ### Single control plane topology
 
 This multicluster configuration uses a single Istio control plane running on one of the clusters.
 The control plane's Pilot manages services on the local and remote clusters and configures the
-Envoy sidecars for all of the clusters. This approach works best in environments where all of
-the participating clusters have VPN connectivity so every pod in the mesh is reachable from anywhere
-else using the same IP address.
+Envoy sidecars for all of the clusters.
 
-{{< image width="80%" ratio="36.01%"
+#### Single control plane with VPN connectivity
+
+The following approach works best in environments where all of the participating clusters have VPN connectivity so
+every pod in the mesh is reachable from anywhere else using the same IP address.
+
+{{< image width="80%"
     link="./multicluster-with-vpn.svg"
     caption="Istio mesh spanning multiple Kubernetes clusters with direct network access to remote pods over VPN"
     >}}
@@ -97,7 +100,9 @@ that manages all of the Envoy's as a single mesh. The IP addresses on the variou
 overlap and note that DNS resolution for services on remote clusters is not automatic.
 Users need to replicate the services on every participating cluster.
 You can find detailed steps to set up this kind of multicluster topology
-in our [single control plane with VPN instructions](/docs/setup/kubernetes/multicluster-install/vpn/).
+in our [single control plane with VPN instructions](/docs/setup/kubernetes/install/multicluster/vpn/).
+
+#### Single control plane without VPN connectivity
 
 If setting up an environment with universal pod-to-pod connectivity is difficult or impossible,
 it may still be possible to configure a single control plane topology using Istio gateways and
@@ -107,7 +112,7 @@ as, for example, on managed Kubernetes platforms where the API servers run on a 
 to all tenant clusters.
 If this is not possible, a multiple control plane topology is probably a better alternative.
 
-{{< image width="80%" ratio="36.01%"
+{{< image width="80%"
     link="./multicluster-split-horizon-eds.svg"
     caption="Istio mesh spanning multiple Kubernetes clusters using single Istio control plane and Gateway to reach remote pods"
     >}}

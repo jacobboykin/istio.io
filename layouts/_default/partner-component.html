@@ -1,13 +1,13 @@
 {{ define "main" }}
-{{ partial "primary-top.html" . }}
+{{ partial "primary_top.html" . }}
 
-<div class="partner-component-notice">
+<div class="partner-component">
     <p>
         {{ i18n "partner_component_notice" }}
     </p>
 
     {{ if .Params.logo_link }}
-        <table class="with_logo" style="background: url('{{ .Params.logo_link }}'); background-size: auto 80%; background-repeat: no-repeat; background-position: center;">
+        <table class="with-logo" style="background: url('{{ .Params.logo_link }}'); background-size: auto 80%; background-repeat: no-repeat; background-position: center;">
     {{ else }}
         <table>
     {{ end }}
@@ -50,5 +50,5 @@
 
 {{ .Content }}
 
-{{ partial "primary-bottom.html" . }}
+{{ partial "primary_bottom.html" . }}
 {{ end }}

@@ -1,7 +1,7 @@
 ---
 title: Style Guide
 description: Explains the dos and donts of writing Istio documentation.
-weight: 70
+weight: 20
 aliases:
     - /docs/welcome/contribute/style-guide.html
     - /docs/reference/contribute/style-guide.html
@@ -123,7 +123,7 @@ Related Terms:
 |----------------|------
 | load balancing | `load-balancing`
 | multicluster   | `multi-cluster`
-| add-on         | `addon`
+| addon          | `add-on`
 | service mesh   | `Service Mesh`
 | sidecar        | `side-car`, `Sidecar`
 | Kubernetes     | `kubernetes`, `k8s`

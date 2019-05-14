@@ -4,11 +4,13 @@ description: 描述基于 Istio Bookinfo 示例的简单场景。
 publishdate: 2018-01-31
 subtitle: HTTPS 流量的出口规则
 attribution: Vadim Eisenberg
-weight: 93
 keywords: [traffic-management,egress,https]
 ---
 
-> 此博客文章于 2018 年 8 月 9 日更新。它反映并使用了 Istio 1.0 的新功能
+{{< tip >}}
+此博客文章于 2018 年 8 月 9 日更新。它反映并使用了 Istio 1.0 的新功能。
+{{< /tip >}}
+
 [v1alpha3 流量管理 API](/zh/blog/2018/v1alpha3-routing/)。如果您需要使用旧版本，请按照文档进行操作
 [使用外部 Web 服务归档版](https://archive.istio.io/v0.7/blog/2018/egress-https.html)。
 
@@ -24,7 +26,7 @@ keywords: [traffic-management,egress,https]
 
 ## 初始设定
 
-为了演示使用外部 Web 服务的场景，我首先使用安装了 [Istio](/zh/docs/setup/kubernetes/quick-start/#安装步骤) 的
+为了演示使用外部 Web 服务的场景，我首先使用安装了 [Istio](/zh/docs/setup/kubernetes/install/kubernetes/#安装步骤) 的
  Kubernetes 集群, 然后我部署 [Istio Bookinfo 示例应用程序](/zh/docs/examples/bookinfo/),
  此应用程序使用 _details_ 微服务来获取书籍详细信息，例如页数和发布者, 原始 _details_ 微服务提供书籍
  详细信息，无需咨询任何外部服务。
@@ -54,7 +56,7 @@ $ kubectl apply -f @samples/bookinfo/platform/kube/bookinfo-details-v2.yaml@ --d
 现在，应用程序的更新架构如下所示：
 
 {{< image width="80%"
-    link="/blog/2018/egress-https/bookinfo-details-v2.svg"
+    link="bookinfo-details-v2.svg"
     caption="Bookinfo 的 details V2 应用程序"
     >}}
 
@@ -73,7 +75,7 @@ $ kubectl apply -f @samples/bookinfo/networking/virtual-service-details-v2.yaml@
 
 糟糕...页面显示 _Error fetching product details_，而不是书籍详细信息：
 
-{{< image width="80%" link="/blog/2018/egress-https/errorFetchingBookDetails.png" caption="获取产品详细信息的错误消息" >}}
+{{< image width="80%" link="errorFetchingBookDetails.png" caption="获取产品详细信息的错误消息" >}}
 
 好消息是我们的应用程序没有崩溃, 通过良好的微服务设计，我们没有让**故障扩散**。在我们的例子中，
 失败的 _details_ 微服务不会导致 `productpage` 微服务失败, 尽管 _details_ 微服务失败，
@@ -82,7 +84,7 @@ $ kubectl apply -f @samples/bookinfo/networking/virtual-service-details-v2.yaml@
 
 那可能出了什么问题？ 啊......答案是我忘了启用从网格内部到外部服务的流量，在本例中是 Google Book Web 服务。
 默认情况下，Istio sidecar 代理（[Envoy proxies](https://www.envoyproxy.io)）
-**阻止到集群外目的地的所有流量**, 要启用此类流量，我们必须定义[mesh-external service entry](/zh/docs/reference/config/istio.networking.v1alpha3/#ServiceEntry)。
+**阻止到集群外目的地的所有流量**, 要启用此类流量，我们必须定义[mesh-external service entry](/zh/docs/reference/config/istio.networking.v1alpha3/#serviceentry)。
 
 ### 启用对 Google Books 网络服务的 HTTPS 访问
 
@@ -128,7 +130,7 @@ EOF
 
 现在访问应用程序的网页会显示书籍详细信息而不会出现错误：
 
-{{< image width="80%" link="/blog/2018/egress-https/externalBookDetails.png" caption="正确显示书籍详细信息" >}}
+{{< image width="80%" link="externalBookDetails.png" caption="正确显示书籍详细信息" >}}
 
 您可以查询您的 `ServiceEntry` ：
 
@@ -182,7 +184,7 @@ sidecar 代理的这种监督和策略执行是无法实现的。Istio 只能通
 这些请求被 sidecar Envoy 代理拦截 , sidecar 代理执行 TLS 发起，因此 pod 和外部服务之间的流量被加密。
 
 {{< image width="60%"
-    link="/blog/2018/egress-https/https_from_the_app.svg"
+    link="https_from_the_app.svg"
     caption="对外发起 HTTPS 流量的两种方式：微服务自行发起，或由 Sidecar 代理发起"
     >}}
 

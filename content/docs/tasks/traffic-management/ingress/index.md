@@ -10,7 +10,7 @@ aliases:
 In a Kubernetes environment, the [Kubernetes Ingress Resource](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 is used to specify services that should be exposed outside the cluster.
 In an Istio service mesh, a better approach (which also works in both Kubernetes and other environments) is to use a
-different configuration model, namely [Istio Gateway](/docs/reference/config/istio.networking.v1alpha3/#Gateway).
+different configuration model, namely [Istio Gateway](/docs/reference/config/networking/v1alpha3/gateway/).
 A `Gateway` allows Istio features such as monitoring and route rules to be applied to traffic entering the cluster.
 
 This task describes how to configure Istio to expose a service outside of the service mesh using an Istio `Gateway`.
@@ -21,20 +21,7 @@ This task describes how to configure Istio to expose a service outside of the se
 
 *   Make sure your current directory is the `istio` directory.
 
-*   Start the [httpbin]({{< github_tree >}}/samples/httpbin) sample,
-    which will be used as the destination service to be exposed externally.
-
-    If you have enabled [automatic sidecar injection](/docs/setup/kubernetes/sidecar-injection/#automatic-sidecar-injection), deploy the `httpbin` service:
-
-    {{< text bash >}}
-    $ kubectl apply -f @samples/httpbin/httpbin.yaml@
-    {{< /text >}}
-
-    Otherwise, you have to manually inject the sidecar before deploying the `httpbin` application:
-
-    {{< text bash >}}
-    $ kubectl apply -f <(istioctl kube-inject -f @samples/httpbin/httpbin.yaml@)
-    {{< /text >}}
+{{< boilerplate start-httpbin-service >}}
 
 *   Determine the ingress IP and ports as described in the following subsection.
 
@@ -101,13 +88,6 @@ Setting the ingress IP depends on the cluster provider:
     $ gcloud compute firewall-rules create allow-gateway-https --allow tcp:$SECURE_INGRESS_PORT
     {{< /text >}}
 
-1.  _IBM Cloud Kubernetes Service Free Tier:_
-
-    {{< text bash >}}
-    $ bx cs workers <cluster-name or id>
-    $ export INGRESS_HOST=<public IP of one of the worker nodes>
-    {{< /text >}}
-
 1.  _Minikube:_
 
     {{< text bash >}}
@@ -123,12 +103,12 @@ Setting the ingress IP depends on the cluster provider:
 1.  _Other environments (e.g., IBM Cloud Private etc):_
 
     {{< text bash >}}
-    $ export INGRESS_HOST=$(kubectl get po -l istio=ingressgateway -n istio-system -o 'jsonpath={.items[0].status.hostIP}')
+    $ export INGRESS_HOST=$(kubectl get po -l istio=ingressgateway -n istio-system -o jsonpath='{.items[0].status.hostIP}')
     {{< /text >}}
 
 ## Configuring ingress using an Istio Gateway
 
-An ingress [Gateway](/docs/reference/config/istio.networking.v1alpha3/#Gateway) describes a load balancer operating at the edge of the mesh that receives incoming HTTP/TCP connections.
+An ingress [Gateway](/docs/reference/config/networking/v1alpha3/gateway/) describes a load balancer operating at the edge of the mesh that receives incoming HTTP/TCP connections.
 It configures exposed ports, protocols, etc.
 but, unlike [Kubernetes Ingress Resources](https://kubernetes.io/docs/concepts/services-networking/ingress/),
 does not include any traffic routing configuration. Traffic routing for ingress traffic is instead configured
@@ -184,17 +164,23 @@ Let's see how you can configure a `Gateway` on port 80 for HTTP traffic.
     EOF
     {{< /text >}}
 
-    You have now created a [virtual service](/docs/reference/config/istio.networking.v1alpha3/#VirtualService)
+    You have now created a [virtual service](/docs/reference/config/networking/v1alpha3/virtual-service/)
     configuration for the `httpbin` service containing two route rules that allow traffic for paths `/status` and
     `/delay`.
 
-    The [gateways](/docs/reference/config/istio.networking.v1alpha3/#VirtualService-gateways) list
+    The [gateways](/docs/reference/config/networking/v1alpha3/virtual-service/#VirtualService-gateways) list
     specifies that only requests through your `httpbin-gateway` are allowed.
     All other external requests will be rejected with a 404 response.
 
-    Note that in this configuration, internal requests from other services in the mesh are not subject to these rules
-    but instead will default to round-robin routing. To apply these or other rules to internal calls,
-    you can add the special value `mesh` to the list of `gateways`.
+    {{< warning >}}
+    Internal requests from other services in the mesh are not subject to these rules
+    but instead will default to round-robin routing. To apply these rules to internal calls as well,
+    you can add the special value `mesh` to the list of `gateways`. Since the internal hostname for the
+    service is probabaly different (e.g., `httpbin.default.svc.cluster.local`) from the external one,
+    you will also need to add it to the `hosts` list. Refer to the
+    [troubleshooting guide](/docs/ops/traffic-management/troubleshooting/#route-rules-have-no-effect-on-ingress-gateway-requests)
+    for more details.
+    {{< /warning >}}
 
 1.  Access the _httpbin_ service using _curl_:
 
@@ -278,6 +264,31 @@ available for edge services.
 
 In the preceding steps, you created a service inside the service mesh
 and exposed an HTTP endpoint of the service to external traffic.
+
+## Troubleshooting
+
+1.  Inspect the values of the `INGRESS_HOST` and `INGRESS_PORT` environment variables. Make sure
+they have valid values, according to the output of the following commands:
+
+    {{< text bash >}}
+    $ kubectl get svc -n istio-system
+    $ echo INGRESS_HOST=$INGRESS_HOST, INGRESS_PORT=$INGRESS_PORT
+    {{< /text >}}
+
+1.  Check that you have no other Istio ingress gateways defined on the same port:
+
+    {{< text bash >}}
+    $ kubectl get gateway --all-namespaces
+    {{< /text >}}
+
+1.  Check that you have no Kubernetes Ingress resources defined on the same IP and port:
+
+    {{< text bash >}}
+    $ kubectl get ingress --all-namespaces
+    {{< /text >}}
+
+1.  If you have an external load balancer and it does not work for you, try to access the gateway using the service's
+    [node port](/docs/tasks/traffic-management/ingress/#determining-the-ingress-ip-and-ports-when-using-a-node-port).
 
 ## Cleanup
 

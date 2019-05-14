@@ -1,7 +1,5 @@
 User-agent: *
-{{ if .Site.Data.args.preliminary }}
-Disallow: /
-{{ else }}
 Disallow:
-{{ end }}
+{{ if not .Site.Data.args.archive_landing -}}
 Sitemap: {{ .Site.BaseURL }}/sitemap.xml
+{{- end -}}

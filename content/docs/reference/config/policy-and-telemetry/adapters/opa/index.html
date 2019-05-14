@@ -1,4 +1,6 @@
 ---
+WARNING: THIS IS AN AUTO-GENERATED FILE, DO NOT EDIT. PLEASE MODIFY THE ORIGINAL SOURCE IN THE https://github.com/istio/istio REPO
+source_repo: https://github.com/istio/istio
 title: OPA
 description: Adapter that implements an Open Policy Agent engine.
 location: https://istio.io/docs/reference/config/policy-and-telemetry/adapters/opa.html
@@ -20,7 +22,7 @@ that provides sophisticated access control mechanisms.</p>
 
 <p>Example configuration:</p>
 
-<pre><code>policy:
+<pre><code class="language-yaml">policy:
   - |+
     package mixerauthz
     policy = [
@@ -69,7 +71,7 @@ failClose: true
 <td><code>string</code></td>
 <td>
 <p>Query method to check.
-Format: data.<package name>.<method name></p>
+Format: data.&lt;package name&gt;.&lt;method name&gt;</p>
 
 </td>
 </tr>

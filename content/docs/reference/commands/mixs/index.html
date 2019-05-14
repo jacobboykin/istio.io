@@ -1,33 +1,23 @@
 ---
+WARNING: THIS IS AN AUTO-GENERATED FILE, DO NOT EDIT. PLEASE MODIFY THE ORIGINAL SOURCE IN THE https://github.com/istio/istio REPO
+source_repo: https://github.com/istio/istio
 title: mixs
 description: Mixer is Istio's abstraction on top of infrastructure backends.
 generator: pkg-collateral-docs
-number_of_entries: 9
+number_of_entries: 5
 ---
 <p>Mixer is Istio&#39;s point of integration with infrastructure backends and is the
 nexus for policy evaluation and telemetry reporting.</p>
-<h2 id="mixs-crd">mixs crd</h2>
-<p>CRDs (CustomResourceDefinition) available in Mixer</p>
-<h2 id="mixs-crd-adapter">mixs crd adapter</h2>
-<p>List CRDs for available adapters</p>
-<pre class="language-bash"><code>mixs crd adapter [flags]
-</code></pre>
-<h2 id="mixs-crd-all">mixs crd all</h2>
-<p>List all CRDs</p>
-<pre class="language-bash"><code>mixs crd all [flags]
-</code></pre>
-<h2 id="mixs-crd-instance">mixs crd instance</h2>
-<p>List CRDs for available instance kinds (mesh functions)</p>
-<pre class="language-bash"><code>mixs crd instance [flags]
-</code></pre>
 <h2 id="mixs-probe">mixs probe</h2>
 <p>Check the liveness or readiness of a locally-running server</p>
 <pre class="language-bash"><code>mixs probe [flags]
 </code></pre>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -82,9 +72,11 @@ nexus for policy evaluation and telemetry reporting.</p>
 </code></pre>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -131,6 +123,11 @@ nexus for policy evaluation and telemetry reporting.</p>
 <td><code>--configStoreURL &lt;string&gt;</code></td>
 <td></td>
 <td>URL of the config store. Use k8s://path_to_kubeconfig, fs:// for file system, or mcps://&lt;address&gt; for MCP/Galley. If path_to_kubeconfig is empty, in-cluster kubeconfig is used.  (default ``)</td>
+</tr>
+<tr>
+<td><code>--configWaitTimeout &lt;duration&gt;</code></td>
+<td></td>
+<td>Timeout until the initial set of configurations are received, before declaring as ready.  (default `2m0s`)</td>
 </tr>
 <tr>
 <td><code>--ctrlz_address &lt;string&gt;</code></td>
@@ -235,7 +232,7 @@ nexus for policy evaluation and telemetry reporting.</p>
 <tr>
 <td><code>--monitoringPort &lt;uint16&gt;</code></td>
 <td></td>
-<td>HTTP port to use for the exposing mixer self-monitoring information  (default `9093`)</td>
+<td>HTTP port to use for Mixer self-monitoring information  (default `15014`)</td>
 </tr>
 <tr>
 <td><code>--numCheckCacheEntries &lt;int32&gt;</code></td>
@@ -292,6 +289,11 @@ nexus for policy evaluation and telemetry reporting.</p>
 <td></td>
 <td>Whether or not to allow configuration of Mixer via adapter-specific CRDs </td>
 </tr>
+<tr>
+<td><code>--useTemplateCRDs</code></td>
+<td></td>
+<td>Whether or not to allow configuration of Mixer via template-specific CRDs </td>
+</tr>
 </tbody>
 </table>
 <h2 id="mixs-version">mixs version</h2>
@@ -300,9 +302,11 @@ nexus for policy evaluation and telemetry reporting.</p>
 </code></pre>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -314,6 +318,178 @@ nexus for policy evaluation and telemetry reporting.</p>
 <td><code>--short</code></td>
 <td><code>-s</code></td>
 <td>Displays a short form of the version information </td>
+</tr>
+</tbody>
+</table>
+<h2 id="envvars">Environment variables</h2>
+These environment variables affect the behavior of the <code>mixs</code> command.
+<table class="envvars">
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Type</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BYPASS_OOP_MTLS_SAN_VERIFICATION</code></td>
+<td>Boolean</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ISTIO_GPRC_MAXSTREAMS</code></td>
+<td>Integer</td>
+<td><code>100000</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ISTIO_LANG</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>KUBECONFIG</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_CERT_DIR</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_DEBOUNCE_AFTER</code></td>
+<td>Time Duration</td>
+<td><code>100ms</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_DEBOUNCE_MAX</code></td>
+<td>Time Duration</td>
+<td><code>10s</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_DEBUG_ADSZ_CONFIG</code></td>
+<td>Boolean</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_DISABLE_EDS_ISOLATION</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_DISABLE_XDS_MARSHALING_TO_ANY</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_ENABLE_CDS_PRECOMPUTATION</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_ENABLE_FALLTHROUGH_ROUTE</code></td>
+<td>Boolean</td>
+<td><code>false</code></td>
+<td>EnableFallthroughRoute provides an option to add a final wildcard match for routes. When ALLOW_ANY traffic policy is used, a Passthrough cluster is used. When REGISTRY_ONLY traffic policy is used, a 502 error is returned.</td>
+</tr>
+<tr>
+<td><code>PILOT_ENABLE_LOCALITY_LOAD_BALANCING</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_ENABLE_WAIT_CACHE_SYNC</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_HTTP10</code></td>
+<td>Boolean</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_PUSH_BURST</code></td>
+<td>Integer</td>
+<td><code>100</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_PUSH_THROTTLE</code></td>
+<td>Integer</td>
+<td><code>10</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_TRACE_SAMPLING</code></td>
+<td>Floating-Point</td>
+<td><code>100</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>POD_NAMESPACE</code></td>
+<td>String</td>
+<td><code>istio-system</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>TERMINATION_DRAIN_DURATION_SECONDS</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>V2_REFRESH</code></td>
+<td>Time Duration</td>
+<td><code>0s</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="annotations">Annotations</h2>
+These resource annotations are used by the <code>mixs</code> command.
+<table class="annotations">
+<thead>
+<tr>
+<th>Annotation Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>policy.istio.io/check</code></td>
+<td>Determines the policy for behavior when unable to connect to Mixer. If not set, FAIL_CLOSE is set, rejecting requests.</td>
+</tr>
+<tr>
+<td><code>policy.istio.io/checkBaseRetryWaitTime</code></td>
+<td>Base time to wait between retries, will be adjusted by backoff and jitter. In duration format. If not set, this will be 80ms.</td>
+</tr>
+<tr>
+<td><code>policy.istio.io/checkMaxRetryWaitTime</code></td>
+<td>Maximum time to wait between retries to Mixer. In duration format. If not set, this will be 1000ms.</td>
+</tr>
+<tr>
+<td><code>policy.istio.io/checkRetries</code></td>
+<td>The maximum number of retries on transport errors to Mixer. If not set, this will be 0, indicating no retries.</td>
+</tr>
+<tr>
+<td><code>policy.istio.io/lang</code></td>
+<td>Select a language runtime</td>
 </tr>
 </tbody>
 </table>

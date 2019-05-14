@@ -1,4 +1,6 @@
 ---
+WARNING: THIS IS AN AUTO-GENERATED FILE, DO NOT EDIT. PLEASE MODIFY THE ORIGINAL SOURCE IN THE https://github.com/istio/istio REPO
+source_repo: https://github.com/istio/istio
 title: sidecar-injector
 description: Kubernetes webhook for automatic Istio sidecar injection.
 generator: pkg-collateral-docs
@@ -9,8 +11,10 @@ number_of_entries: 4
 </code></pre>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -28,6 +32,10 @@ number_of_entries: 4
 <tr>
 <td><code>--injectConfig &lt;string&gt;</code></td>
 <td>File containing the Istio sidecar injection configuration and template  (default `/etc/istio/inject/config`)</td>
+</tr>
+<tr>
+<td><code>--injectValues &lt;string&gt;</code></td>
+<td>File containing the Istio sidecar injection values, in yaml format  (default `/etc/istio/inject/values`)</td>
 </tr>
 <tr>
 <td><code>--kubeconfig &lt;string&gt;</code></td>
@@ -101,8 +109,10 @@ number_of_entries: 4
 </code></pre>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -120,6 +130,10 @@ number_of_entries: 4
 <tr>
 <td><code>--injectConfig &lt;string&gt;</code></td>
 <td>File containing the Istio sidecar injection configuration and template  (default `/etc/istio/inject/config`)</td>
+</tr>
+<tr>
+<td><code>--injectValues &lt;string&gt;</code></td>
+<td>File containing the Istio sidecar injection values, in yaml format  (default `/etc/istio/inject/values`)</td>
 </tr>
 <tr>
 <td><code>--interval &lt;duration&gt;</code></td>
@@ -201,9 +215,11 @@ number_of_entries: 4
 </code></pre>
 <table class="command-flags">
 <thead>
+<tr>
 <th>Flags</th>
 <th>Shorthand</th>
 <th>Description</th>
+</tr>
 </thead>
 <tbody>
 <tr>
@@ -225,6 +241,11 @@ number_of_entries: 4
 <td><code>--injectConfig &lt;string&gt;</code></td>
 <td></td>
 <td>File containing the Istio sidecar injection configuration and template  (default `/etc/istio/inject/config`)</td>
+</tr>
+<tr>
+<td><code>--injectValues &lt;string&gt;</code></td>
+<td></td>
+<td>File containing the Istio sidecar injection values, in yaml format  (default `/etc/istio/inject/values`)</td>
 </tr>
 <tr>
 <td><code>--kubeconfig &lt;string&gt;</code></td>
@@ -315,6 +336,210 @@ number_of_entries: 4
 <td><code>--webhookName &lt;string&gt;</code></td>
 <td></td>
 <td>Name of the webhook entry in the webhook config.  (default `sidecar-injector.istio.io`)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="envvars">Environment variables</h2>
+These environment variables affect the behavior of the <code>sidecar-injector</code> command.
+<table class="envvars">
+<thead>
+<tr>
+<th>Variable Name</th>
+<th>Type</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ISTIO_GPRC_MAXSTREAMS</code></td>
+<td>Integer</td>
+<td><code>100000</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_CERT_DIR</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_DEBOUNCE_AFTER</code></td>
+<td>Time Duration</td>
+<td><code>100ms</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_DEBOUNCE_MAX</code></td>
+<td>Time Duration</td>
+<td><code>10s</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_DEBUG_ADSZ_CONFIG</code></td>
+<td>Boolean</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_DISABLE_EDS_ISOLATION</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_DISABLE_XDS_MARSHALING_TO_ANY</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_ENABLE_CDS_PRECOMPUTATION</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_ENABLE_FALLTHROUGH_ROUTE</code></td>
+<td>Boolean</td>
+<td><code>false</code></td>
+<td>EnableFallthroughRoute provides an option to add a final wildcard match for routes. When ALLOW_ANY traffic policy is used, a Passthrough cluster is used. When REGISTRY_ONLY traffic policy is used, a 502 error is returned.</td>
+</tr>
+<tr>
+<td><code>PILOT_ENABLE_LOCALITY_LOAD_BALANCING</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_ENABLE_WAIT_CACHE_SYNC</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_HTTP10</code></td>
+<td>Boolean</td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_PUSH_BURST</code></td>
+<td>Integer</td>
+<td><code>100</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_PUSH_THROTTLE</code></td>
+<td>Integer</td>
+<td><code>10</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>PILOT_TRACE_SAMPLING</code></td>
+<td>Floating-Point</td>
+<td><code>100</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>TERMINATION_DRAIN_DURATION_SECONDS</code></td>
+<td>String</td>
+<td><code></code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>V2_REFRESH</code></td>
+<td>Time Duration</td>
+<td><code>0s</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="annotations">Annotations</h2>
+These resource annotations are used by the <code>sidecar-injector</code> command.
+<table class="annotations">
+<thead>
+<tr>
+<th>Annotation Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>policy.istio.io/check</code></td>
+<td>Determines the policy for behavior when unable to connect to Mixer. If not set, FAIL_CLOSE is set, rejecting requests.</td>
+</tr>
+<tr>
+<td><code>policy.istio.io/checkBaseRetryWaitTime</code></td>
+<td>Base time to wait between retries, will be adjusted by backoff and jitter. In duration format. If not set, this will be 80ms.</td>
+</tr>
+<tr>
+<td><code>policy.istio.io/checkMaxRetryWaitTime</code></td>
+<td>Maximum time to wait between retries to Mixer. In duration format. If not set, this will be 1000ms.</td>
+</tr>
+<tr>
+<td><code>policy.istio.io/checkRetries</code></td>
+<td>The maximum number of retries on transport errors to Mixer. If not set, this will be 0, indicating no retries.</td>
+</tr>
+<tr>
+<td><code>readiness.status.sidecar.istio.io/applicationPorts</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>readiness.status.sidecar.istio.io/failureThreshold</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>readiness.status.sidecar.istio.io/initialDelaySeconds</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>readiness.status.sidecar.istio.io/periodSeconds</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>sidecar.istio.io/inject</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>sidecar.istio.io/interceptionMode</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>sidecar.istio.io/proxyImage</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>sidecar.istio.io/rewriteAppHTTPProbers</code></td>
+<td>Rewrite HTTP readiness and liveness probes to be redirected to istio-proxy sidecar</td>
+</tr>
+<tr>
+<td><code>sidecar.istio.io/status</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>status.sidecar.istio.io/port</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>traffic.sidecar.istio.io/excludeInboundPorts</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>traffic.sidecar.istio.io/excludeOutboundIPRanges</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>traffic.sidecar.istio.io/includeInboundPorts</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>traffic.sidecar.istio.io/includeOutboundIPRanges</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>traffic.sidecar.istio.io/kubevirtInterfaces</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
